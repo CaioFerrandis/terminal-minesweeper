@@ -1,0 +1,14 @@
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/app.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/edit_cache.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/rebuild_cache.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/list_install_components.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/install.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/install/local.dir
+C:/Users/ferra/cpp/terminal/build/CMakeFiles/install/strip.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/enet.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/edit_cache.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/rebuild_cache.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/list_install_components.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/install.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/install/local.dir
+C:/Users/ferra/cpp/terminal/build/external/enet/CMakeFiles/install/strip.dir

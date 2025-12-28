@@ -1,0 +1,62 @@
+[
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\c++.exe -IC:/Users/ferra/cpp/terminal/external/enet/include -std=gnu++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\app.dir\\src\\main.cpp.obj -c C:\\Users\\ferra\\cpp\\terminal\\src\\main.cpp",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\src\\main.cpp",
+  "output": "CMakeFiles\\app.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\callbacks.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\callbacks.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\callbacks.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\callbacks.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\compress.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\compress.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\compress.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\compress.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\host.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\host.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\host.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\host.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\list.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\list.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\list.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\list.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\packet.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\packet.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\packet.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\packet.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\peer.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\peer.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\peer.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\peer.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\protocol.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\protocol.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\protocol.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\protocol.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\unix.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\unix.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\unix.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\unix.c.obj"
+},
+{
+  "directory": "C:/Users/ferra/cpp/terminal/build",
+  "command": "C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF=1 -IC:/Users/ferra/cpp/terminal/external/enet/include   -Wno-error -o external\\enet\\CMakeFiles\\enet.dir\\win32.c.obj -c C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\win32.c",
+  "file": "C:\\Users\\ferra\\cpp\\terminal\\external\\enet\\win32.c",
+  "output": "external\\enet\\CMakeFiles\\enet.dir\\win32.c.obj"
+}
+]
