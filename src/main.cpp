@@ -1,10 +1,12 @@
 #include <cstdio>
 #include <cstdlib>
+#include <iterator>
+#include <utilapiset.h>
 #include <winsock2.h>
 #include <windows.h>
 
-#include <enet/enet.h>
 #include <conio.h>
+#include <enet/enet.h>
 #include <iostream>
 #include <string>
 
@@ -30,16 +32,18 @@
 #define LIGHT_CYAN    "\033[96m"
 #define GLOWING_WHITE "\033[97m"
 
-#define RESET         "\033[0m"
-// im sorry i like making my code feel like its from the 1980s alr
+#define RESET_COL         "\033[0m"
+#define CLEAR         "\033[2J"
+#define RESET_CURSOR_POS  "\033[H"
+#define SHOW_CURSOR "\033[?25h"
+#define HIDE_CURSOR "\033[?25l"
+
+#define FRAME_DELAY 16
 
 
-
-enum Key {
-    UP = 72,
-    DOWN = 80,
-    LEFT = 75,
-    RIGHT = 77
+enum Game{
+    PLAYING,
+    MENU
 };
 
 
@@ -58,161 +62,307 @@ std::tuple<int, int> init(){
     rows = csbi.srWindow.Bottom - csbi.srWindow.Top;
     columns = csbi.srWindow.Right - csbi.srWindow.Left;
 
+    columns = 30;
+    rows = 20;
     return std::make_tuple(columns, rows);
 }
 
 
-void flood_fill(Map &map, int x, int y){
-    Tile &t = map.get(x, y);
-    if (t.value != '0') return; // make sure its a 0
-    t.revealed = true;
+inline const std::string& color_from_number(char v) {
+    static const std::string colors[9] = {
+        "\033[38;5;240m",
+        "\033[38;5;19m",
+        "\033[38;5;28m",
+        "\033[38;5;124m",
+        "\033[38;5;21m",
+        "\033[38;5;196m",
+        "\033[38;5;202m",
+        "\033[38;5;171m",
+        "\033[38;5;142m"
+    };
+    return colors[v - '0'];
+}
 
-    for (int dx = -1; dx <= 1; dx++){
-        for (int dy = -1; dy <= 1; dy++){
-            if (dx == 0 && dy == 0) continue; // skips itself
-            int nx = x + dx;
-            int ny = y + dy;
 
-            // is it inside the map?
-            if (nx < 0 || ny < 0 || nx >= map.w || ny >= map.h) continue;
+void game_loop(bool &running, bool is_server, Server &server, Client &client, Map &map, Input &input){
+    if (is_server) {
+        // is both CLIENT and SERVER
+        server_update(&server, map); // handle inputs from all clients
 
-            Tile &neighbor = map.get(nx, ny);
-            if (neighbor.revealed) continue;
+        enet_host_flush(server.host);
 
-            neighbor.revealed = true;
-            if (neighbor.value == '0'){ // do the flood
-                flood_fill(map, nx, ny);
+        if (map.over){
+            std::cout << CLEAR << RESET_CURSOR_POS << SHOW_CURSOR << RESET_COL << "\033[?25l" << "Game over! Do you want to replay? (y/n)\n>> ";
+            char option;
+            std::cin >> option;
+
+            if (option == 'y' || option == 'Y'){
+                map = Map(map.w, map.h, map.start_bombs);
+            } else {
+                std::cout << "Exitting application...";
+                running = false;
+                return;
             }
         }
     }
-}
+    
+    client_update(&client);
 
+    client_send_input_to_server(&client, input);
+    enet_host_flush(client.host);
 
-void use_tile(Map &map, int x, int y){
-    Tile &tile = map.get(x, y);
-    tile.revealed = true;
+    // -------- INPUT --------
+    input.reset();
+    running = handle_input_client(input);
 
-    if (tile.kind == Tile::BOMB){
-        // exit(0);
-    } else if (tile.value == '0'){
-        flood_fill(map, x, y);
+    // -------- BOUNDARY --------
+    if (input.x < 0) input.x = 0;
+    if (input.y < 0) input.y = 0;
+    if (input.x >= map.w) input.x = map.w - 1;
+    if (input.y >= map.h) input.y = map.h - 1;
+
+    // -------- DRAW/RENDER --------
+    if (!client.recv_map) {
+        return;
     }
+    
+    std::string frame;
+    frame += CLEAR;
+    frame.reserve(client.recv_map->w * map.h + client.recv_map->h);
+
+    for (int i = 0; i < client.recv_map->h; i++){
+        std::string line;
+        std::string last_color = RESET_COL;
+
+        for (int j = 0; j < client.recv_map->w; j++){
+            Tile &t = client.recv_map->get(j, i);
+            std::string color = WHITE;
+            char display;
+
+            if (t.revealed){
+                if (t.kind == Tile::BOMB){
+                        color = RED;
+                        display = '!';
+                } else {
+                    color = color_from_number(t.value);
+                    display = t.value;
+                }
+            }
+            else if (t.flagged){
+                color = YELLOW;
+                display = 'F';
+            }
+            else{
+                color = WHITE;
+                display = '#';
+            }
+            
+            for (int p = 0; p < MAX_PLAYERS; p++){ // pseudo code for rendering players
+                if (client.players.initialized[p] == false) {
+                    continue;
+                }
+                
+                int px = client.players.positions[p].x;
+                int py = client.players.positions[p].y;
+
+                if (py == i && px == j) {
+                    color = CYAN;
+                    display = 'X';
+                }
+            }
+
+            if (color != last_color){
+                line += color;
+                last_color = color;
+            }
+
+            line += display;
+            line += ' '; // optional for better looks :)
+        }
+
+        if (i == 1){
+            line += RESET_COL;
+            line += "  Bombs: ";
+            line += std::to_string(map.bombs);
+        }
+
+        line += RESET_COL;
+        frame += line + '\n';
+    }
+
+    std::cout << RESET_CURSOR_POS << frame << std::flush;
+
+    if (map.bombs == 0) map.check_win();
 }
 
+void menu_loop(Game& state, bool &running, bool &is_server, Client& client, Server& server) {
+    int option = 0;
+    int old_option = option;
+    std::string options[3] = { // i could use code to align the texts but come on
+        "Host Game",
+        "Join Game",
+        "Quit"
+    };
 
-bool handle_input(int &x, int &y, Map &map){
-    if (_kbhit()) { // if key pressed...
-        int c = _getch();
+    int option_count = std::size(options);
 
-        if (c == 0 || c == 224) { // get special characters
-            int key = _getch();
-            if (key == UP)    y--;
-            if (key == DOWN)  y++;
-            if (key == LEFT)  x--;
-            if (key == RIGHT) x++;
-        } else { // do normal keyboard handling
-            if (c == 'q') {
-                std::cout << "\033[?25h";
-                return false;
-            }
-            if (c == ' '){
-                use_tile(map, x, y);
+    size_t max_len = 0;
+    for (int i = 0; i < option_count; i++) {
+        max_len = std::max(max_len, options[i].length());
+    }
+    
+    bool selected = false;
+    std::cout << CLEAR << RESET_COL;
+    while (!selected){
+        std::cout << RESET_CURSOR_POS;
+
+        std::cout << "Welcome to " << GLOWING_WHITE << "MineSweeper!" << RESET_COL << "\n\n\n";
+
+        for (size_t i = 0; i < std::size(options); i++){
+            size_t pad = max_len - options[i].length();
+            size_t left = pad / 2;
+            size_t right = pad - left;
+
+            std::string left_pad(left, ' ');
+            std::string right_pad(right, ' ');
+
+            if (option == (int)i) {
+                std::cout << GLOWING_WHITE
+                        << ">> "
+                        << left_pad
+                        << options[i]
+                        << right_pad
+                        << " <<\n"
+                        << RESET_COL;
+            } else { // print empty space to mimic clear
+                std::cout << "   "
+                        << left_pad
+                        << options[i]
+                        << right_pad
+                        << "   \n";
             }
         }
-    }
+        std::cout << std::flush;
 
-    return true;
+        if (_kbhit()){
+            int k = _getch();
+            if (k == 0 || k == 224){
+                int key = _getch();
+                if (key == 72)
+                    option--;
+                if (key == 80)
+                    option++;
+            } else{
+                if (k == 'w' || k == 'W') option--;
+                if (k == 's' || k == 'S') option++;
+                if (k == ' ' || k == 13){ // space or enter
+                    selected = true;
+                    Beep(2000, 100);
+                }
+                if (k == 27){
+                    running = false;
+                    return;
+                }
+            }
+
+            if (option < 0) option = 2;
+            else if (option > 2) option = 0;
+
+            if (option != old_option){
+                Beep(600, 80);
+
+                old_option = option;
+            }
+        }
+
+        if (selected){
+            std::cout << SHOW_CURSOR << CLEAR;
+            if (option == 0) {
+                std::string input;
+                std::cout << "insert port to host the server:\n" << SHOW_CURSOR;
+                std::cin >> input;
+
+                if (input == "q" || input == "Q"){
+                    selected = false;
+                    std::cout << HIDE_CURSOR << CLEAR;
+                    continue;
+                }
+
+                int port = std::stoi(input);
+
+                server = server_init(port);
+
+                client_connect(&client, "localhost", port);
+
+                is_server = true;
+            } else if (option == 1) {
+                std::cout << "Write the server's address:\n>> ";
+                std::string addr;
+                std::cin >> addr;
+
+                if (addr == "q" || addr == "Q"){
+                    selected = false;
+                    std::cout << HIDE_CURSOR << CLEAR;
+                    continue;
+                }
+                
+                std::cout << "Now the port:\n>>";
+                std::string input;
+                std::cin >> input;
+
+                if (input == "q" || input == "Q"){
+                    selected = false;
+                    std::cout << HIDE_CURSOR << CLEAR;
+                    continue;
+                }
+
+                int port = stoi(input);
+                
+                client_connect(&client, addr.data(), port);
+            } else if (option == 2){
+                running = false;
+            }
+            state = Game::PLAYING;
+            std::cout << HIDE_CURSOR;
+        }
+
+        Sleep(FRAME_DELAY);
+    }
 }
 
 
-int main(int argc, char* argv[]) {
+int main() {
     auto [WIDTH, HEIGHT] = init();
     
     Client client;
     Server server;
     bool is_server = false;
-    
-    if (argc > 1) {
-        if (strcmp(argv[1], "server") == 0){
-            server = server_init();
-            client = client_init();
-            is_server = true;
-        } else if (strcmp(argv[1], "client") == 0){
-            client = client_init();
-        }
-    }
-    
-    int x = 5;
-    int y = 5;
 
-    std::cout << "\033[?25l"; // hide cursor
+    if (enet_initialize() != 0) {
+        printf("ENet failed to initialize\n");
+        return 1;
+    }
+
+    std::cout << HIDE_CURSOR;
+    
+    client = client_init();
 
     Map map( WIDTH, HEIGHT, WIDTH*HEIGHT/10);
+    Input input(5, 5);
+
+    Game game = Game::MENU;
 
     bool running = true;
     while (running) {
-        if (is_server) {
-            server_update(&server);
-            server_broadcast_map(&server, map);
+        if (game == Game::MENU){
+            menu_loop(game, running, is_server, client, server);
+        } else if (game == Game::PLAYING){
+            game_loop(running, is_server, server, client, map, input);
         }
 
-        // -------- INPUT --------
-        running = handle_input(x, y, map);
-
-        // -------- BOUNDARY --------
-        if (x < 0) x = 0;
-        if (y < 0) y = 0;
-        if (x >= map.w) x = map.w - 1;
-        if (y >= map.h) y = map.h - 1;
-
-        // -------- DRAW/RENDER --------
-        std::string frame;
-        frame.reserve(map.w * map.h + map.h);
-
-        for (int i = 0; i < map.h; i++){
-            std::string line;
-            std::string last_color = RESET;
-
-            for (int j = 0; j < map.w; j++){
-                Tile &t = map.get(j, i);
-                std::string color = WHITE;
-                char display;
-
-                if (i == y && j == x) {
-                    color = CYAN;
-                    display = 'X';
-                }
-                else if (t.revealed){
-                    if (t.kind == Tile::BOMB){
-                         color = RED;
-                         display = '!';
-                    } else {
-                        color = GREEN;
-                        display = t.value;
-                    }
-                } else{
-                    color = WHITE;
-                    display = '#';
-                }
-
-                if (color != last_color){
-                    line += color;
-                    last_color = color;
-                }
-
-                line += display;
-            }
-
-            line += RESET;
-            frame += line + '\n';
-        }
-
-        std::cout << "\033[H" << frame << std::flush;
-
-        // -------- FRAME --------
-        Sleep(16);
+        Sleep(FRAME_DELAY);
     }
-    
+    std::cout << SHOW_CURSOR;
     client_cleanup(&client);
     enet_deinitialize();
     
