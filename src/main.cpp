@@ -1,11 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iterator>
-#include <utilapiset.h>
-#include <winsock2.h>
-#include <windows.h>
-
-#include <conio.h>
+#include "platform_compat.h"
 #include <enet/enet.h>
 #include <iostream>
 #include <string>
@@ -48,20 +44,9 @@ enum Game{
 
 
 std::tuple<int, int> init(){
-    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-    DWORD mode;
-    GetConsoleMode(h, &mode);
-    SetConsoleMode(h, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+    auto [columns, rows] = platform_init_console();
 
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
-    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
-
-    int rows, columns;
-  
-    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
-    rows = csbi.srWindow.Bottom - csbi.srWindow.Top;
-    columns = csbi.srWindow.Right - csbi.srWindow.Left;
-
+    // fixed layout for the game UI
     columns = 30;
     rows = 20;
     return std::make_tuple(columns, rows);
@@ -127,7 +112,6 @@ void game_loop(bool &running, bool is_server, Server &server, Client &client, Ma
     }
     
     std::string frame;
-    frame += CLEAR;
     frame.reserve(client.recv_map->w * map.h + client.recv_map->h);
 
     for (int i = 0; i < client.recv_map->h; i++){

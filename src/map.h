@@ -89,6 +89,18 @@ struct Map {
                 }
             }
         }
+
+        int x = x_dist(rng);
+        int y = y_dist(rng);
+        Tile t = get(x, y);
+        // try to find a random '0' on the map and use it
+        // so the player wont start by clicking on a bomb
+        while (t.kind == Tile::BOMB || t.value != '0'){
+            x = x_dist(rng);
+            y = y_dist(rng);
+            t = get(x, y);
+        }
+        use_tile(x, y);
     }
 
     Tile& get(int x, int y){
@@ -98,6 +110,45 @@ struct Map {
         }
 
         return data[x][y];
+    }
+
+    void use_tile(int x, int y){
+        Tile &tile = get(x, y);
+        tile.revealed = true;
+
+        if (tile.kind == Tile::BOMB){
+            bombs -= 1;
+            over = true;
+        } else if (tile.value == '0'){
+            flood_fill(x, y);
+        }
+    }
+
+    void flood_fill(int x, int y){
+        Tile &t = get(x, y);
+        if (t.value != '0') return; // make sure its a 0
+        t.revealed = true;
+
+        for (int dx = -1; dx <= 1; dx++){
+            for (int dy = -1; dy <= 1; dy++){
+                if (dx == 0 && dy == 0) continue; // skips itself
+                int nx = x + dx;
+                int ny = y + dy;
+
+                // is it inside the map?
+                if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue;
+
+                Tile &neighbor = get(nx, ny);
+                if (neighbor.revealed) continue;
+
+                if (!neighbor.flagged){
+                    neighbor.revealed = true;
+                    if (neighbor.value == '0'){ // do the flood
+                        flood_fill(nx, ny);
+                    }
+                }
+            }
+        }
     }
 
     void check_win(){
@@ -115,40 +166,3 @@ struct Map {
         if (count == start_bombs) over = true;
     }
 };
-
-inline void flood_fill(Map &map, int x, int y){
-    Tile &t = map.get(x, y);
-    if (t.value != '0') return; // make sure its a 0
-    t.revealed = true;
-
-    for (int dx = -1; dx <= 1; dx++){
-        for (int dy = -1; dy <= 1; dy++){
-            if (dx == 0 && dy == 0) continue; // skips itself
-            int nx = x + dx;
-            int ny = y + dy;
-
-            // is it inside the map?
-            if (nx < 0 || ny < 0 || nx >= map.w || ny >= map.h) continue;
-
-            Tile &neighbor = map.get(nx, ny);
-            if (neighbor.revealed) continue;
-
-            neighbor.revealed = true;
-            if (neighbor.value == '0'){ // do the flood
-                flood_fill(map, nx, ny);
-            }
-        }
-    }
-}
-
- inline void use_tile(Map &map, int x, int y){
-    Tile &tile = map.get(x, y);
-    tile.revealed = true;
-
-    if (tile.kind == Tile::BOMB){
-        map.bombs -= 1;
-        map.over = true;
-    } else if (tile.value == '0'){
-        flood_fill(map, x, y);
-    }
-}

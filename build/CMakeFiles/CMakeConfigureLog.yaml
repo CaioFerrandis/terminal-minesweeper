@@ -17,7 +17,7 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Users/ferra/mingw64/bin/clang.exe 
+      Compiler: C:/Users/ferra/mingw64/bin/gcc.exe 
       Build flags: 
       Id flags:  
       
@@ -27,8 +27,8 @@ events:
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
-      The C compiler identification is Clang, found in:
-        C:/Users/ferra/cpp/terminal/build/CMakeFiles/3.30.1/CompilerIdC/a.exe
+      The C compiler identification is GNU, found in:
+        C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/3.30.1/CompilerIdC/a.exe
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        C:/Users/ferra/cpp/terminal/build/CMakeFiles/3.30.1/CompilerIdCXX/a.exe
+        C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/3.30.1/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sywbuy"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sywbuy"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,31 +71,62 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sywbuy'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_c51f5
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -v -MD -MT CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_c51f5.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
-        (built by Brecht Sanders, r3) clang version 19.1.7
-        Target: x86_64-w64-windows-gnu
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_6457d
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\gcc.exe
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe
         Thread model: posix
-        InstalledDir: C:/Users/ferra/mingw64/bin
-         (in-process)
-         "C:/Users/ferra/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0 -v -fcoverage-compilation-dir=C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0 -resource-dir C:/Users/ferra/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_c51f5.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/Users/ferra/mingw64/lib/clang/19/include -internal-isystem C:/Users/ferra/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/Users/ferra/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/Users/ferra/mingw64/include -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
-        clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target x86_64-w64-mingw32
-        ignoring nonexistent directory "C:/Users/ferra/mingw64/x86_64-w64-mingw32/usr/include"
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/'
+         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6457d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccYAlCC5.s
+        GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) version 14.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include"
+        ignoring nonexistent directory "R:/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc/include"
+        ignoring nonexistent directory "/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc/include"
+        ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"
+        ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         C:/Users/ferra/mingw64/lib/clang/19/include
-         C:/Users/ferra/mingw64/x86_64-w64-mingw32/include
-         C:/Users/ferra/mingw64/include
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe  -v -Wl,-v CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -o cmTC_c51f5.exe -Wl,--out-implib,libcmTC_c51f5.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        (built by Brecht Sanders, r3) clang version 19.1.7
-        Target: x86_64-w64-windows-gnu
+        Compiler executable checksum: 94245774513fa7f0f98ee8b5b949a4b7
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/'
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccYAlCC5.s
+        GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r3) 2.44
+        COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../libexec/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../lib/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj -o cmTC_6457d.exe -Wl,--out-implib,libcmTC_6457d.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe
         Thread model: posix
-        InstalledDir: C:/Users/ferra/mingw64/bin
-         "C:/Users/ferra/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_c51f5.exe C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/Users/ferra/mingw64/lib -v CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c51f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 
+        COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../libexec/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../lib/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6457d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6457d.'
+         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccAkWXxk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6457d.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_6457d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        collect2 version 14.2.0
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccAkWXxk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6457d.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_6457d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r3) 2.44
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6457d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6457d.'
         
       exitCode: 0
   -
@@ -108,14 +139,16 @@ events:
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [C:/Users/ferra/mingw64/lib/clang/19/include]
-          add: [C:/Users/ferra/mingw64/x86_64-w64-mingw32/include]
-          add: [C:/Users/ferra/mingw64/include]
+          add: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include]
+          add: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include]
+          add: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed]
+          add: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         end of search list found
-        collapse include dir [C:/Users/ferra/mingw64/lib/clang/19/include] ==> [C:/Users/ferra/mingw64/lib/clang/19/include]
-        collapse include dir [C:/Users/ferra/mingw64/x86_64-w64-mingw32/include] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/include]
-        collapse include dir [C:/Users/ferra/mingw64/include] ==> [C:/Users/ferra/mingw64/include]
-        implicit include dirs: [C:/Users/ferra/mingw64/lib/clang/19/include;C:/Users/ferra/mingw64/x86_64-w64-mingw32/include;C:/Users/ferra/mingw64/include]
+        collapse include dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include]
+        collapse include dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include] ==> [C:/Users/ferra/mingw64/include]
+        collapse include dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed]
+        collapse include dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include;C:/Users/ferra/mingw64/include;C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed;C:/Users/ferra/mingw64/x86_64-w64-mingw32/include]
       
       
   -
@@ -128,46 +161,111 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0']
+        ignore line: [Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sywbuy']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_c51f5]
-        ignore line: [[1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -v -MD -MT CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_c51f5.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"]
-        ignore line: [(built by Brecht Sanders  r3) clang version 19.1.7]
-        ignore line: [Target: x86_64-w64-windows-gnu]
+        ignore line: [Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_6457d]
+        ignore line: [[1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\gcc.exe]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: C:/Users/ferra/mingw64/bin]
-        ignore line: [ (in-process)]
-        ignore line: [ "C:/Users/ferra/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0 -v -fcoverage-compilation-dir=C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-mnr0n0 -resource-dir C:/Users/ferra/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_c51f5.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/Users/ferra/mingw64/lib/clang/19/include -internal-isystem C:/Users/ferra/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/Users/ferra/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/Users/ferra/mingw64/include -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"]
-        ignore line: [clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target x86_64-w64-mingw32]
-        ignore line: [ignoring nonexistent directory "C:/Users/ferra/mingw64/x86_64-w64-mingw32/usr/include"]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r3) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/']
+        ignore line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6457d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccYAlCC5.s]
+        ignore line: [GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r3) version 14.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include"]
+        ignore line: [ignoring nonexistent directory "R:/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc/include"]
+        ignore line: [ignoring nonexistent directory "/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/ferra/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ C:/Users/ferra/mingw64/lib/clang/19/include]
-        ignore line: [ C:/Users/ferra/mingw64/x86_64-w64-mingw32/include]
-        ignore line: [ C:/Users/ferra/mingw64/include]
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include]
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include]
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed]
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe  -v -Wl -v CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj -o cmTC_c51f5.exe -Wl --out-implib libcmTC_c51f5.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
-        ignore line: [(built by Brecht Sanders  r3) clang version 19.1.7]
-        ignore line: [Target: x86_64-w64-windows-gnu]
+        ignore line: [Compiler executable checksum: 94245774513fa7f0f98ee8b5b949a4b7]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/']
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccYAlCC5.s]
+        ignore line: [GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r3) 2.44]
+        ignore line: [COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj -o cmTC_6457d.exe -Wl --out-implib libcmTC_6457d.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe]
         ignore line: [Thread model: posix]
-        ignore line: [InstalledDir: C:/Users/ferra/mingw64/bin]
-        link line: [ "C:/Users/ferra/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_c51f5.exe C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/Users/ferra/mingw64/lib -v CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c51f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
-          arg [C:/Users/ferra/mingw64/bin/ld] ==> ignore
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r3) ]
+        ignore line: [COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6457d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6457d.']
+        link line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccAkWXxk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6457d.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_6457d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+          arg [C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccAkWXxk.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_c51f5.exe] ==> ignore
-          arg [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o] ==> obj [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o]
-          arg [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
-          arg [-LC:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0]
-          arg [-LC:/Users/ferra/mingw64/x86_64-w64-mingw32/lib] ==> dir [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib]
-          arg [-LC:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib] ==> dir [C:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib]
-          arg [-LC:/Users/ferra/mingw64/lib] ==> dir [C:/Users/ferra/mingw64/lib]
+          arg [cmTC_6457d.exe] ==> ignore
+          arg [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_c51f5.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_6457d.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_c51f5.dll.a] ==> ignore
+          arg [libcmTC_6457d.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -175,9 +273,10 @@ events:
           arg [-lmingw32] ==> lib [mingw32]
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
           arg [-lmingwex] ==> lib [mingwex]
           arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
           arg [-ladvapi32] ==> lib [advapi32]
           arg [-lshell32] ==> lib [shell32]
           arg [-luser32] ==> lib [user32]
@@ -185,23 +284,27 @@ events:
           arg [-lmingw32] ==> lib [mingw32]
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
           arg [-lmingwex] ==> lib [mingwex]
           arg [-lmsvcrt] ==> lib [msvcrt]
           arg [-lkernel32] ==> lib [kernel32]
-          arg [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
-        linker tool for 'C': C:/Users/ferra/mingw64/bin/ld
+          arg [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        linker tool for 'C': Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe
         remove lib [gcc_eh]
         remove lib [msvcrt]
         remove lib [gcc_eh]
         remove lib [msvcrt]
-        collapse library dir [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0]
-        collapse library dir [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib]
-        collapse library dir [C:/Users/ferra/mingw64/lib] ==> [C:/Users/ferra/mingw64/lib]
-        implicit libs: [mingw32;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;kernel32]
+        collapse obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
+        collapse obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc] ==> [C:/Users/ferra/mingw64/lib/gcc]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib] ==> [C:/Users/ferra/mingw64/lib]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> [C:/Users/ferra/mingw64/lib]
+        implicit libs: [mingw32;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;mingwex;kernel32]
         implicit objs: [C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib/crt2.o;C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o;C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
-        implicit dirs: [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib;C:/Users/ferra/mingw64/x86_64-w64-mingw32/mingw/lib;C:/Users/ferra/mingw64/lib]
+        implicit dirs: [C:/Users/ferra/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;C:/Users/ferra/mingw64/lib/gcc;C:/Users/ferra/mingw64/x86_64-w64-mingw32/lib;C:/Users/ferra/mingw64/lib]
         implicit fwks: []
       
       
@@ -213,8 +316,28 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Running the C compiler's linker: "C:/Users/ferra/mingw64/bin/ld" "-v"
-      GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r3) 2.44
+      Running the C compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe" "-v"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe" "-V"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe" "--version"
+      
   -
     kind: "try_compile-v1"
     backtrace:
@@ -224,8 +347,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-frsqa3"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-frsqa3"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-921wqx"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-921wqx"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -235,10 +358,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-frsqa3'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-921wqx'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_7c1a9
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_d2b4f
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\c++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -247,8 +370,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/'
-         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7c1a9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccUDWbaa.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/'
+         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d2b4f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccrxj8p3.s
         GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -273,13 +396,13 @@ events:
          C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 3da29e1884ee8eb45ff9171cc0f881c4
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/'
-         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccUDWbaa.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/'
+         C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccrxj8p3.s
         GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r3) 2.44
         COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../libexec/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../lib/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\c++.exe  -v -Wl,-v CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7c1a9.exe -Wl,--out-implib,libcmTC_7c1a9.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\c++.exe  -v -Wl,-v CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_d2b4f.exe -Wl,--out-implib,libcmTC_d2b4f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
@@ -291,12 +414,12 @@ events:
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 
         COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../libexec/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/ferra/mingw64/bin/../lib/gcc/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1a9.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1a9.'
-         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccCIegLm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_7c1a9.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7c1a9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2b4f.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2b4f.'
+         C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccVStiSe.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d2b4f.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_d2b4f.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccCIegLm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_7c1a9.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7c1a9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccVStiSe.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d2b4f.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_d2b4f.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r3) 2.44
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1a9.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1a9.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2b4f.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2b4f.'
         
       exitCode: 0
   -
@@ -337,10 +460,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-frsqa3']
+        ignore line: [Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-921wqx']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_7c1a9]
-        ignore line: [[1/2] C:\\Users\\ferra\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_d2b4f]
+        ignore line: [[1/2] C:\\Users\\ferra\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\c++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -349,8 +472,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r3) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/']
-        ignore line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7c1a9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccUDWbaa.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/']
+        ignore line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d2b4f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\ferra\\AppData\\Local\\Temp\\ccrxj8p3.s]
         ignore line: [GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r3) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -375,8 +498,8 @@ events:
         ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 3da29e1884ee8eb45ff9171cc0f881c4]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/']
-        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccUDWbaa.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/']
+        ignore line: [ C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ferra\\AppData\\Local\\Temp\\ccrxj8p3.s]
         ignore line: [GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r3) 2.44]
         ignore line: [COMPILER_PATH=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/Users/ferra/mingw64/bin/../libexec/gcc/]
@@ -387,8 +510,8 @@ events:
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\c++.exe  -v -Wl -v CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7c1a9.exe -Wl --out-implib libcmTC_7c1a9.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\c++.exe  -v -Wl -v CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_d2b4f.exe -Wl --out-implib libcmTC_d2b4f.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ferra\\mingw64\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
@@ -407,13 +530,13 @@ events:
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1a9.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1a9.']
-        link line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccCIegLm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_7c1a9.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7c1a9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2b4f.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2b4f.']
+        link line: [ C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccVStiSe.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d2b4f.exe C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/ferra/mingw64/bin/../lib/gcc -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_d2b4f.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/ferra/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccCIegLm.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ferra\\AppData\\Local\\Temp\\ccVStiSe.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -435,7 +558,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_7c1a9.exe] ==> ignore
+          arg [cmTC_d2b4f.exe] ==> ignore
           arg [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -445,9 +568,9 @@ events:
           arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LC:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7c1a9.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_d2b4f.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_7c1a9.dll.a] ==> ignore
+          arg [libcmTC_d2b4f.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -527,8 +650,8 @@ events:
     checks:
       - "Looking for fcntl"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-vy2vyn"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-vy2vyn"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-p0ltro"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-p0ltro"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -537,15 +660,15 @@ events:
       variable: "HAS_FCNTL"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-vy2vyn'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-p0ltro'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_1e6ec
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=fcntl -MD -MT CMakeFiles/cmTC_1e6ec.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_1e6ec.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_1e6ec.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-vy2vyn/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=fcntl  CMakeFiles/cmTC_1e6ec.dir/CheckFunctionExists.c.obj -o cmTC_1e6ec.exe -Wl,--out-implib,libcmTC_1e6ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_1e6ec.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=fcntl  CMakeFiles/cmTC_1e6ec.dir/CheckFunctionExists.c.obj -o cmTC_1e6ec.exe -Wl,--out-implib,libcmTC_1e6ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_1e6ec.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `fcntl'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_f518b
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=fcntl -o CMakeFiles/cmTC_f518b.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-p0ltro/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=fcntl  CMakeFiles/cmTC_f518b.dir/CheckFunctionExists.c.obj -o cmTC_f518b.exe -Wl,--out-implib,libcmTC_f518b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_f518b.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=fcntl  CMakeFiles/cmTC_f518b.dir/CheckFunctionExists.c.obj -o cmTC_f518b.exe -Wl,--out-implib,libcmTC_f518b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_f518b.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `fcntl'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -557,8 +680,8 @@ events:
     checks:
       - "Looking for poll"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-v3jq3n"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-v3jq3n"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-my3l6a"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-my3l6a"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -567,15 +690,15 @@ events:
       variable: "HAS_POLL"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-v3jq3n'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-my3l6a'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_fdca4
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=poll -MD -MT CMakeFiles/cmTC_fdca4.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_fdca4.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_fdca4.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-v3jq3n/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_fdca4.dir/CheckFunctionExists.c.obj -o cmTC_fdca4.exe -Wl,--out-implib,libcmTC_fdca4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_fdca4.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_fdca4.dir/CheckFunctionExists.c.obj -o cmTC_fdca4.exe -Wl,--out-implib,libcmTC_fdca4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_fdca4.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `poll'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_59157
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=poll -o CMakeFiles/cmTC_59157.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-my3l6a/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_59157.dir/CheckFunctionExists.c.obj -o cmTC_59157.exe -Wl,--out-implib,libcmTC_59157.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_59157.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_59157.dir/CheckFunctionExists.c.obj -o cmTC_59157.exe -Wl,--out-implib,libcmTC_59157.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_59157.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `poll'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -587,8 +710,8 @@ events:
     checks:
       - "Looking for getaddrinfo"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-lamew9"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-lamew9"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-dhnwd5"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-dhnwd5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -597,15 +720,15 @@ events:
       variable: "HAS_GETADDRINFO"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-lamew9'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-dhnwd5'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_8ecc7
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=getaddrinfo -MD -MT CMakeFiles/cmTC_8ecc7.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_8ecc7.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_8ecc7.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-lamew9/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=getaddrinfo  CMakeFiles/cmTC_8ecc7.dir/CheckFunctionExists.c.obj -o cmTC_8ecc7.exe -Wl,--out-implib,libcmTC_8ecc7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_8ecc7.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=getaddrinfo  CMakeFiles/cmTC_8ecc7.dir/CheckFunctionExists.c.obj -o cmTC_8ecc7.exe -Wl,--out-implib,libcmTC_8ecc7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_8ecc7.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `getaddrinfo'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_610d2
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=getaddrinfo -o CMakeFiles/cmTC_610d2.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-dhnwd5/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=getaddrinfo  CMakeFiles/cmTC_610d2.dir/CheckFunctionExists.c.obj -o cmTC_610d2.exe -Wl,--out-implib,libcmTC_610d2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_610d2.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=getaddrinfo  CMakeFiles/cmTC_610d2.dir/CheckFunctionExists.c.obj -o cmTC_610d2.exe -Wl,--out-implib,libcmTC_610d2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_610d2.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `getaddrinfo'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -617,8 +740,8 @@ events:
     checks:
       - "Looking for getnameinfo"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-a7pqwd"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-a7pqwd"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-rg2qbq"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-rg2qbq"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -627,15 +750,15 @@ events:
       variable: "HAS_GETNAMEINFO"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-a7pqwd'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-rg2qbq'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_a59a3
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=getnameinfo -MD -MT CMakeFiles/cmTC_a59a3.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_a59a3.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_a59a3.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-a7pqwd/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=getnameinfo  CMakeFiles/cmTC_a59a3.dir/CheckFunctionExists.c.obj -o cmTC_a59a3.exe -Wl,--out-implib,libcmTC_a59a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_a59a3.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=getnameinfo  CMakeFiles/cmTC_a59a3.dir/CheckFunctionExists.c.obj -o cmTC_a59a3.exe -Wl,--out-implib,libcmTC_a59a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_a59a3.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `getnameinfo'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_37364
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=getnameinfo -o CMakeFiles/cmTC_37364.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-rg2qbq/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=getnameinfo  CMakeFiles/cmTC_37364.dir/CheckFunctionExists.c.obj -o cmTC_37364.exe -Wl,--out-implib,libcmTC_37364.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_37364.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=getnameinfo  CMakeFiles/cmTC_37364.dir/CheckFunctionExists.c.obj -o cmTC_37364.exe -Wl,--out-implib,libcmTC_37364.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_37364.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `getnameinfo'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -647,8 +770,8 @@ events:
     checks:
       - "Looking for gethostbyname_r"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-gqa31v"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-gqa31v"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sb0582"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sb0582"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -657,15 +780,15 @@ events:
       variable: "HAS_GETHOSTBYNAME_R"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-gqa31v'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sb0582'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_a4f15
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=gethostbyname_r -MD -MT CMakeFiles/cmTC_a4f15.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_a4f15.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_a4f15.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-gqa31v/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=gethostbyname_r  CMakeFiles/cmTC_a4f15.dir/CheckFunctionExists.c.obj -o cmTC_a4f15.exe -Wl,--out-implib,libcmTC_a4f15.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_a4f15.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=gethostbyname_r  CMakeFiles/cmTC_a4f15.dir/CheckFunctionExists.c.obj -o cmTC_a4f15.exe -Wl,--out-implib,libcmTC_a4f15.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_a4f15.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `gethostbyname_r'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_d1249
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=gethostbyname_r -o CMakeFiles/cmTC_d1249.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-sb0582/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=gethostbyname_r  CMakeFiles/cmTC_d1249.dir/CheckFunctionExists.c.obj -o cmTC_d1249.exe -Wl,--out-implib,libcmTC_d1249.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_d1249.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=gethostbyname_r  CMakeFiles/cmTC_d1249.dir/CheckFunctionExists.c.obj -o cmTC_d1249.exe -Wl,--out-implib,libcmTC_d1249.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_d1249.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `gethostbyname_r'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -677,8 +800,8 @@ events:
     checks:
       - "Looking for gethostbyaddr_r"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9cltzt"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9cltzt"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-juveiv"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-juveiv"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -687,15 +810,15 @@ events:
       variable: "HAS_GETHOSTBYADDR_R"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9cltzt'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-juveiv'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_f26c1
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r -MD -MT CMakeFiles/cmTC_f26c1.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_f26c1.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_f26c1.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9cltzt/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r  CMakeFiles/cmTC_f26c1.dir/CheckFunctionExists.c.obj -o cmTC_f26c1.exe -Wl,--out-implib,libcmTC_f26c1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_f26c1.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r  CMakeFiles/cmTC_f26c1.dir/CheckFunctionExists.c.obj -o cmTC_f26c1.exe -Wl,--out-implib,libcmTC_f26c1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_f26c1.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `gethostbyaddr_r'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_31835
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r -o CMakeFiles/cmTC_31835.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-juveiv/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r  CMakeFiles/cmTC_31835.dir/CheckFunctionExists.c.obj -o cmTC_31835.exe -Wl,--out-implib,libcmTC_31835.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_31835.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r  CMakeFiles/cmTC_31835.dir/CheckFunctionExists.c.obj -o cmTC_31835.exe -Wl,--out-implib,libcmTC_31835.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_31835.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `gethostbyaddr_r'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -707,8 +830,8 @@ events:
     checks:
       - "Looking for inet_pton"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-2uxjgo"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-2uxjgo"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-57kpwi"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-57kpwi"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -717,15 +840,15 @@ events:
       variable: "HAS_INET_PTON"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-2uxjgo'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-57kpwi'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_60b5b
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=inet_pton -MD -MT CMakeFiles/cmTC_60b5b.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_60b5b.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_60b5b.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-2uxjgo/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=inet_pton  CMakeFiles/cmTC_60b5b.dir/CheckFunctionExists.c.obj -o cmTC_60b5b.exe -Wl,--out-implib,libcmTC_60b5b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_60b5b.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=inet_pton  CMakeFiles/cmTC_60b5b.dir/CheckFunctionExists.c.obj -o cmTC_60b5b.exe -Wl,--out-implib,libcmTC_60b5b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_60b5b.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `inet_pton'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_30797
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=inet_pton -o CMakeFiles/cmTC_30797.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-57kpwi/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=inet_pton  CMakeFiles/cmTC_30797.dir/CheckFunctionExists.c.obj -o cmTC_30797.exe -Wl,--out-implib,libcmTC_30797.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_30797.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=inet_pton  CMakeFiles/cmTC_30797.dir/CheckFunctionExists.c.obj -o cmTC_30797.exe -Wl,--out-implib,libcmTC_30797.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_30797.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `inet_pton'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -737,8 +860,8 @@ events:
     checks:
       - "Looking for inet_ntop"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-heu55y"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-heu55y"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-jvdxt8"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-jvdxt8"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -747,15 +870,15 @@ events:
       variable: "HAS_INET_NTOP"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-heu55y'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-jvdxt8'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_9c83e
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe   -DCHECK_FUNCTION_EXISTS=inet_ntop -MD -MT CMakeFiles/cmTC_9c83e.dir/CheckFunctionExists.c.obj -MF CMakeFiles\\cmTC_9c83e.dir\\CheckFunctionExists.c.obj.d -o CMakeFiles/cmTC_9c83e.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-heu55y/CheckFunctionExists.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=inet_ntop  CMakeFiles/cmTC_9c83e.dir/CheckFunctionExists.c.obj -o cmTC_9c83e.exe -Wl,--out-implib,libcmTC_9c83e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_9c83e.exe 
-        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DCHECK_FUNCTION_EXISTS=inet_ntop  CMakeFiles/cmTC_9c83e.dir/CheckFunctionExists.c.obj -o cmTC_9c83e.exe -Wl,--out-implib,libcmTC_9c83e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:/Users/ferra/mingw64/bin/ld: CMakeFiles/cmTC_9c83e.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x2c): undefined reference to `inet_ntop'
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_05452
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=inet_ntop -o CMakeFiles/cmTC_05452.dir/CheckFunctionExists.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-jvdxt8/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=inet_ntop  CMakeFiles/cmTC_05452.dir/CheckFunctionExists.c.obj -o cmTC_05452.exe -Wl,--out-implib,libcmTC_05452.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_05452.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=inet_ntop  CMakeFiles/cmTC_05452.dir/CheckFunctionExists.c.obj -o cmTC_05452.exe -Wl,--out-implib,libcmTC_05452.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/Users/ferra/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_05452.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `inet_ntop'
+        collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -768,8 +891,8 @@ events:
     checks:
       - "Performing Test HAS_OFFSETOF"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-ij3i91"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-ij3i91"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-1mj09s"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-1mj09s"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -778,11 +901,11 @@ events:
       variable: "HAS_OFFSETOF"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-ij3i91'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-1mj09s'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_82114
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_OFFSETOF   -MD -MT CMakeFiles/cmTC_82114.dir/src.c.obj -MF CMakeFiles\\cmTC_82114.dir\\src.c.obj.d -o CMakeFiles/cmTC_82114.dir/src.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-ij3i91/src.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\clang.exe   CMakeFiles/cmTC_82114.dir/src.c.obj -o cmTC_82114.exe -Wl,--out-implib,libcmTC_82114.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_800fc
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DHAS_OFFSETOF   -o CMakeFiles/cmTC_800fc.dir/src.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-1mj09s/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_800fc.dir/src.c.obj -o cmTC_800fc.exe -Wl,--out-implib,libcmTC_800fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -795,8 +918,8 @@ events:
     checks:
       - "Performing Test HAS_MSGHDR_FLAGS"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -805,16 +928,16 @@ events:
       variable: "HAS_MSGHDR_FLAGS"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_4e0f7
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_MSGHDR_FLAGS   -MD -MT CMakeFiles/cmTC_4e0f7.dir/src.c.obj -MF CMakeFiles\\cmTC_4e0f7.dir\\src.c.obj.d -o CMakeFiles/cmTC_4e0f7.dir/src.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs/src.c
-        FAILED: [code=1] CMakeFiles/cmTC_4e0f7.dir/src.c.obj 
-        C:\\Users\\ferra\\mingw64\\bin\\clang.exe -DHAS_MSGHDR_FLAGS   -MD -MT CMakeFiles/cmTC_4e0f7.dir/src.c.obj -MF CMakeFiles\\cmTC_4e0f7.dir\\src.c.obj.d -o CMakeFiles/cmTC_4e0f7.dir/src.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs/src.c
-        C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-i3g7zs/src.c:3:10: fatal error: 'sys/socket.h' file not found
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_e9814
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DHAS_MSGHDR_FLAGS   -o CMakeFiles/cmTC_e9814.dir/src.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g/src.c
+        FAILED: [code=1] CMakeFiles/cmTC_e9814.dir/src.c.obj 
+        C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DHAS_MSGHDR_FLAGS   -o CMakeFiles/cmTC_e9814.dir/src.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g/src.c
+        C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-drj48g/src.c:3:10: fatal error: sys/socket.h: No such file or directory
             3 | #include <sys/socket.h>
               |          ^~~~~~~~~~~~~~
-        1 error generated.
+        compilation terminated.
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -827,8 +950,8 @@ events:
     checks:
       - "Check size of socklen_t"
     directories:
-      source: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z"
-      binary: "C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z"
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -837,17 +960,45 @@ events:
       variable: "HAVE_HAS_SOCKLEN_T"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z'
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d'
         
-        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_c9308
-        [1/2] C:\\Users\\ferra\\mingw64\\bin\\clang.exe    -MD -MT CMakeFiles/cmTC_c9308.dir/HAS_SOCKLEN_T.c.obj -MF CMakeFiles\\cmTC_c9308.dir\\HAS_SOCKLEN_T.c.obj.d -o CMakeFiles/cmTC_c9308.dir/HAS_SOCKLEN_T.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z/HAS_SOCKLEN_T.c
-        FAILED: [code=1] CMakeFiles/cmTC_c9308.dir/HAS_SOCKLEN_T.c.obj 
-        C:\\Users\\ferra\\mingw64\\bin\\clang.exe    -MD -MT CMakeFiles/cmTC_c9308.dir/HAS_SOCKLEN_T.c.obj -MF CMakeFiles\\cmTC_c9308.dir\\HAS_SOCKLEN_T.c.obj.d -o CMakeFiles/cmTC_c9308.dir/HAS_SOCKLEN_T.c.obj -c C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z/HAS_SOCKLEN_T.c
-        C:/Users/ferra/cpp/terminal/build/CMakeFiles/CMakeScratch/TryCompile-9g3w5z/HAS_SOCKLEN_T.c:2:10: fatal error: 'sys/socket.h' file not found
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_7e22f
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_7e22f.dir/HAS_SOCKLEN_T.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d/HAS_SOCKLEN_T.c
+        FAILED: [code=1] CMakeFiles/cmTC_7e22f.dir/HAS_SOCKLEN_T.c.obj 
+        C:\\Users\\ferra\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_7e22f.dir/HAS_SOCKLEN_T.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d/HAS_SOCKLEN_T.c
+        C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-7zlh7d/HAS_SOCKLEN_T.c:2:10: fatal error: sys/socket.h: No such file or directory
             2 | #include "sys/socket.h"
               |          ^~~~~~~~~~~~~~
-        1 error generated.
+        compilation terminated.
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:23 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-t56p3m"
+      binary: "C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-t56p3m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-t56p3m'
+        
+        Run Build Command(s): C:/Users/ferra/mingw64/bin/ninja.exe -v cmTC_fbc37
+        [1/2] C:\\Users\\ferra\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_fbc37.dir/src.c.obj -c C:/Users/ferra/terminal-minesweeper/build/CMakeFiles/CMakeScratch/TryCompile-t56p3m/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\ferra\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_fbc37.dir/src.c.obj -o cmTC_fbc37.exe -Wl,--out-implib,libcmTC_fbc37.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
 ...

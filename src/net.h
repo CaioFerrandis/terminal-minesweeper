@@ -2,7 +2,7 @@
 
 #include <enet/enet.h>
 #include <stdio.h>
-#include <conio.h>
+#include "platform_compat.h"
 
 #include <string>
 
@@ -83,7 +83,7 @@ inline Server server_init(int port) {
 }
 
 inline void handle_input_server(Input& input, Map &map){
-    if (input.flagging){
+    if (input.flagging && !map.get(input.x, input.y).revealed){
         Tile &t = map.get(input.x, input.y);
         if (t.flagged){
             map.bombs += 1;
@@ -94,7 +94,7 @@ inline void handle_input_server(Input& input, Map &map){
     }
     if (input.interacting){ // use tile
         if (!map.get(input.x, input.y).flagged){
-            use_tile(map, input.x, input.y);
+            map.use_tile(input.x, input.y);
         }
     }
 }
